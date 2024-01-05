@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Website {{&lt; var topic.name &gt;}} – introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Website Analyzing Gender Representation in STEM Fields through Reddit Data</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./introduction.html" aria-current="page">Summary</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html">EDA</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html">NLP</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html">ML</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analyzing-gender-representation-in-stem-fields-through-reddit-data" id="toc-analyzing-gender-representation-in-stem-fields-through-reddit-data" class="nav-link active" data-scroll-target="#analyzing-gender-representation-in-stem-fields-through-reddit-data"><strong>Analyzing Gender Representation in STEM Fields through Reddit Data</strong></a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><strong>Background</strong></a></li>
+  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective"><strong>Objective</strong></a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><strong>Data Collection</strong></a></li>
+  <li><a href="#significance" id="toc-significance" class="nav-link" data-scroll-target="#significance"><strong>Significance</strong></a></li>
+  <li><a href="#business-goals" id="toc-business-goals" class="nav-link" data-scroll-target="#business-goals"><strong>Business Goals</strong></a></li>
+  <li><a href="#project-made-by" id="toc-project-made-by" class="nav-link" data-scroll-target="#project-made-by"><strong>Project made by</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="analyzing-gender-representation-in-stem-fields-through-reddit-data" class="level1">
+<h1><strong>Analyzing Gender Representation in STEM Fields through Reddit Data</strong></h1>
+<p><img src="Image/Women-in-STEM-fb-tw-li_1.jpg" class="img-fluid"></p>
+</section>
+<section id="background" class="level1">
+<h1><strong>Background</strong></h1>
+<p>The background of this project is rooted in the historical context of gender representation within the fields of Science, Technology, Engineering, and Mathematics (STEM). These fields have traditionally been dominated by men, leading to significant underrepresentation of women and other gender minorities. This gender imbalance has multifaceted implications, ranging from the workplace environment to the types of research and innovation pursued. Here’s an elaboration on this context:</p>
+<ol type="1">
+<li><p><strong>Historical Underrepresentation:</strong> Traditionally, STEM fields have seen a lower participation rate of women and gender minorities. This can be attributed to various factors including societal stereotypes, lack of role models, and systemic barriers within education and employment in these fields. The historical context sets the stage for understanding current challenges and the need for change.</p></li>
+<li><p><strong>Changing Perspectives and Initiatives:</strong> In recent years, there has been a noticeable shift towards recognizing and addressing the gender gap in STEM. This change is driven by both grassroots advocacy and institutional initiatives. Efforts include promoting STEM education among girls, implementing policies for gender equality in workplaces, and increasing the visibility of women and gender minorities in these fields.</p></li>
+<li><p><strong>Role of Online Platforms in Public Discourse:</strong> Platforms like Reddit have become crucial in understanding public discourse on these issues. They offer unfiltered insights into people’s opinions, experiences, and attitudes. The anonymity and diversity of online platforms allow for a wide range of perspectives, including those from individuals directly involved in STEM fields and those observing from the outside.</p></li>
+<li><p><strong>Revealing Challenges:</strong> Online discussions often highlight the ongoing challenges faced by women and gender minorities in STEM. These include experiences of bias and discrimination, difficulties in career advancement, and challenges in achieving work-life balance. Such candid conversations provide real-life examples of the barriers that still exist despite the progress made.</p></li>
+<li><p><strong>Tracking Progress and Shifts in Attitudes:</strong> These platforms also serve as a barometer for measuring shifts in societal attitudes towards gender diversity in STEM. Positive stories of success and support, debates on policies, and discussions about the importance of diversity in driving innovation are all indicators of changing perceptions.</p></li>
+<li><p><strong>Influencing Policy and Cultural Changes:</strong> The discourse on platforms like Reddit not only reflects societal attitudes but can also influence them. It can inform policymakers, educators, and industry leaders about the ground realities, helping shape more effective and inclusive policies and practices.</p></li>
+</ol>
+</section>
+<section id="objective" class="level1">
+<h1><strong>Objective</strong></h1>
+<p>The objective of this project is multi-dimensional, focusing on a comprehensive analysis of discussions about women and gender minorities in STEM fields, specifically within the context of Reddit. The core goals and areas of exploration include:</p>
+<ol type="1">
+<li><p><strong>Understanding Representation:</strong> One of the primary objectives is to assess how women and gender minorities are represented in discussions within STEM-related subreddits. This involves examining the frequency and context in which these groups are mentioned and discussed. The aim is to identify whether their representation is proportionate and respectful, and to uncover any patterns of underrepresentation or misrepresentation.</p></li>
+<li><p><strong>Identifying Challenges:</strong> An important aspect of the project is to uncover the specific challenges faced by women and gender minorities in STEM as voiced by the Reddit community. This may include issues such as gender bias in the workplace, barriers to career advancement, work-life balance concerns, and the experiences of discrimination or harassment. Understanding these challenges is crucial for developing strategies to address them.</p></li>
+<li><p><strong>Analyzing Perceptions and Sentiments:</strong> The project seeks to analyze the overall sentiment of discussions related to women and gender minorities in STEM. This involves using NLP techniques to gauge whether the discourse is predominantly positive, negative, or neutral. By doing so, we can gain insights into the general perceptions of these groups within the STEM community and identify areas where attitudes may need to be shifted.</p></li>
+<li><p><strong>Evaluating Community Engagement:</strong> By examining the level and nature of engagement in these discussions (such as the frequency of posts, comments, and the extent of user participation), we aim to understand how actively the Reddit community engages with issues related to gender in STEM. This can indicate the level of interest and concern among community members about these topics.</p></li>
+<li><p><strong>Contributing to Broader Understanding of Gender Dynamics:</strong> The findings from this analysis will contribute to a broader understanding of gender dynamics in STEM fields. By providing a detailed picture of the current state of discussions around women and gender minorities in STEM, the project can inform academics, industry professionals, and policymakers about the prevailing attitudes and challenges. This knowledge is essential for shaping policies, initiatives, and educational programs aimed at fostering diversity and inclusivity in STEM fields.</p></li>
+<li><p><strong>Informing Future Research and Action:</strong> The insights gained from this study can help inform future research directions and actions by highlighting less explored areas or new emerging themes. It can guide further academic research, advocacy work, and policy-making to support and promote gender equality in STEM.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/images.jpeg" class="img-fluid figure-img" width="600"></p>
+</figure>
+</div>
+</section>
+<section id="data-collection" class="level1">
+<h1><strong>Data Collection</strong></h1>
+<p>The process of compiling our dataset from Reddit was conducted with meticulous attention to detail and a targeted focus. Our objective was to gather a comprehensive and relevant collection of data that specifically reflects the experiences, discussions, and perspectives of women and gender minorities in STEM fields. To achieve this, we concentrated on a selection of subreddits known for their active engagement in these topics. These subreddits include, "xxstem", "LadiesofScience", "Feminism", “womenEngineers”, “AskFeminists” and “AskWomen”</p>
+<p>Each of these subreddits offers a unique window into the varied aspects of women and gender minorities in STEM.</p>
+<ol type="1">
+<li><p><strong>xxstem:</strong> This subreddit is specifically dedicated to discussions about women and non-binary individuals in STEM fields. It’s a space for sharing experiences, challenges, and accomplishments. The content often includes personal stories, advice on navigating STEM careers, and discussions on how to improve gender diversity and inclusivity in these fields.</p></li>
+<li><p><strong>LadiesofScience:</strong> A community focused on the professional and personal lives of women scientists, engineers, and researchers. It serves as a platform for support, sharing experiences, and discussing the specific challenges women face in scientific careers. Topics range from career development to balancing work-life responsibilities and addressing gender bias in science.</p></li>
+<li><p><strong>Feminism:</strong> While covering a broader range of topics related to gender equality, this subreddit often includes discussions relevant to women in STEM. It’s a space for debating systemic issues, advocating for policy changes, and sharing news related to women’s rights and gender equality, with a significant portion dedicated to the challenges and progress in STEM fields.</p></li>
+<li><p><strong>womenEngineers:</strong> Focused on women in engineering, this subreddit addresses the unique experiences of women in this specific STEM field. It’s a community for sharing career advice, discussing the workplace environment, and highlighting both the struggles and successes of women engineers.</p></li>
+<li><p><strong>AskFeminists:</strong> This subreddit provides a platform for asking questions about feminist perspectives and theories. When it comes to STEM, it offers insights into feminist views on issues like gender disparity in STEM education and employment, the impact of gender bias in scientific research, and strategies for achieving gender equality in STEM fields.</p></li>
+<li><p><strong>AskWomen:</strong> A broader forum that covers a wide range of topics from the perspective of women, including those related to STEM. This subreddit often features personal anecdotes about working in STEM, discussions on balancing career and personal life, and opinions on the culture within STEM fields. It provides a diverse range of viewpoints on the everyday experiences of women in various aspects of life, including their roles in STEM.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/download.png" class="img-fluid figure-img" width="500"></p>
+</figure>
+</div>
+</section>
+<section id="significance" class="level1">
+<h1><strong>Significance</strong></h1>
+<p>The significance of this project extends beyond mere data collection and analysis; it represents a crucial step towards understanding and addressing the complex issues surrounding gender representation in STEM fields. By analyzing discussions and sentiments expressed on social media, particularly Reddit, we are tapping into a rich, unfiltered source of public opinion and personal experience. This approach offers several key benefits:</p>
+<ol type="1">
+<li><p><strong>Real-Time Insights into Prevailing Attitudes:</strong> Social media is a dynamic platform where users freely express their views, experiences, and concerns. Analyzing content from Reddit allows us to capture the current sentiment and narratives surrounding women and gender minorities in STEM. This real-time insight is invaluable for understanding the evolving landscape of gender representation in these fields.</p></li>
+<li><p><strong>Informed Decision-Making for Stakeholders:</strong> The findings from this study can serve as an evidence-based guide for educators, policymakers, and advocates working towards gender equality in STEM. By understanding the challenges, successes, and general sentiment expressed by the community, these stakeholders can develop more effective strategies and policies. For instance, educational institutions can use these insights to design curricula and support systems that are more inclusive and sensitive to the needs of underrepresented groups.</p></li>
+<li><p><strong>Empowering Voices of Women and Gender Minorities:</strong> The project gives a platform to the voices of women and gender minorities in STEM, often underrepresented in mainstream discussions. By bringing these narratives to the forefront, the project not only highlights their experiences but also fosters a greater understanding of the unique challenges they face. This can lead to a more empathetic and supportive environment in STEM fields.</p></li>
+<li><p><strong>Guiding Efforts to Promote Gender Diversity:</strong> The analysis can identify specific areas where gender diversity is lacking and reveal underlying causes, such as biases or systemic barriers. This knowledge is crucial for designing targeted interventions to promote inclusivity and diversity in STEM fields.</p></li>
+<li><p><strong>Enhancing Community Engagement and Support:</strong> By understanding the dynamics of online communities discussing STEM and gender issues, advocates and educators can engage more effectively with these communities. This engagement can foster a supportive environment, encouraging more women and gender minorities to pursue and sustain careers in STEM.</p></li>
+<li><p><strong>Benchmarking Progress Over Time:</strong> The project can serve as a benchmark for measuring progress in gender representation in STEM. By regularly analyzing these online discussions, stakeholders can track changes in sentiment and representation over time, gaining a clearer picture of the impact of their efforts and adjusting strategies as needed.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/images%20(1).jpeg" class="img-fluid figure-img" width="600"></p>
+</figure>
+</div>
+</section>
+<section id="business-goals" class="level1">
+<h1><strong>Business Goals</strong></h1>
+<p><strong>Topic 1: Discussion Volume Over Time</strong></p>
+<p><strong>Business Goal:</strong> Track the level of engagement over time in discussions related to women’s issues in STEM on the selected subreddits.</p>
+<p><strong>Technical Proposal:</strong> Extract timestamp data from posts and comments to create a time series analysis of discussion volume. Visualize trends using line graphs to identify any temporal patterns, spikes, or declines in activity, which may correlate with external events or online campaigns.</p>
+<p><strong>Topic 2: Subreddit Engagement Comparison</strong></p>
+<p><strong>Business Goal:</strong> Compare the level of activity and engagement across various subreddits to understand where the most vibrant discussions on women’s issues in STEM are taking place.</p>
+<p><strong>Technical Proposal:</strong> Aggregate the number of posts, comments, and upvotes across the different subreddits. Use bar charts to visualize the distribution of engagement. Perform statistical analysis to see if the differences in engagement levels are significant.</p>
+<p><strong>Topic 3: Topic Popularity</strong></p>
+<p><strong>Business Goal:</strong> Identify which topics within women’s issues in STEM are most popular and what the sentiment is towards these topics.</p>
+<p><strong>Technical Proposal:</strong> Use NLP to categorize comments into topics and then count the number of comments per topic. Combine this with sentiment analysis to assess the overall sentiment for each topic. Visualize the popularity and sentiment using a word cloud, where the size of the text represents the frequency of the popular words in the comments.</p>
+<p><strong>Topic 4: Identifying Core Contributors in STEM Discussions</strong></p>
+<p><strong>Business Goal:</strong> Uncover the most active and influential authors contributing to discussions on women’s issues in STEM, to foster community engagement and recognize key voices.</p>
+<p><strong>Technical Proposal:</strong> Merge the datasets for comments and submissions and use data aggregation techniques to count the number of contributions per author. Identify common authors between the two datasets to ascertain individuals who are both starting conversations and engaging with others’ content. Apply data visualization tools to display the distribution of contributions and highlight the top contributors. Analyze the patterns of these core contributors to understand their impact on the community.</p>
+<p><strong>Topic 5: Analysis of Peak Activity Times</strong></p>
+<p><strong>Business Goal</strong>: Identify the times when users are most active in STEM-related discussions to optimize the scheduling of content and moderation resources.</p>
+<p><strong>Technical Proposal</strong>: Use time series analysis to determine peak activity periods by analyzing post and comment timestamps. Perform ANOVA tests to find statistically significant differences in activity levels across different times.</p>
+<p><strong>Topic 6: Sentiment Analysis on Comments</strong></p>
+<p><strong>Business Goal</strong>: Gauge the general sentiment (positive, negative, neutral) of the community towards women’s issues in STEM.</p>
+<p><strong>Technical Proposal</strong>: Apply sentiment analysis algorithms to the body of comments. Aggregate sentiment scores by subreddit and over time to see how community sentiment varies across different forums and temporal dimensions.</p>
+<p><strong>Topic 7: Content Effectiveness by Authorship</strong></p>
+<p><strong>Business Goal:</strong> Understand the impact of anonymous versus known user contributions on the discussion effectiveness and engagement.</p>
+<p><strong>Technical Proposal</strong>: Compare engagement metrics for posts authored by [deleted] users against those by users with known handles. Use statistical analysis to measure the difference in engagement.</p>
+<p><strong>Topic 8: Common Challenges Highlighted</strong></p>
+<p><strong>Business Goal</strong>: Identify the most common challenges faced by women in STEM as discussed in these subreddits.</p>
+<p><strong>Technical Proposal</strong>: Employ topic modeling and keyword extraction to pinpoint recurring themes of challenges. Use clustering algorithms to group similar issues and identify major categories.</p>
+<p><strong>Topic 9: Impact of Moderation on Discussion Quality</strong></p>
+<p><strong>Business Goal</strong>: Assess the impact of post removal (moderation) on the quality and direction of discussions.</p>
+<p><strong>Technical Proposal</strong>: Analyze the correlation between posts marked <strong>[removed]</strong> or <strong>[deleted]</strong> and the subsequent number of comments. Use NLP to compare the content of moderated versus unmoderated posts.</p>
+<p><strong>Topic 10: Machine Learning to Predict Discussion Popularity</strong></p>
+<p><strong>Business Goal</strong>: Predict the potential popularity of a discussion topic based on initial engagement and content features.</p>
+<p><strong>Technical Proposal</strong>: Build a machine learning model using features like time of post, initial engagement, author’s historical engagement, post length, and keyword analysis to predict future engagement. Use regression models for numerical engagement prediction or classification models for high/low engagement.</p>
+</section>
+<section id="project-made-by" class="level1">
+<h1><strong>Project made by</strong></h1>
+<p><img src="Image/1699640447738.jpg" class="img-fluid"></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 23] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/anly503/lab-2.1">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

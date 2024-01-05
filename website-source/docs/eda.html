@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Website {{&lt; var topic.name &gt;}} – eda</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Website Analyzing Gender Representation in STEM Fields through Reddit Data</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./introduction.html">Summary</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./eda.html" aria-current="page">EDA</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html">NLP</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html">ML</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." id="toc-exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." class="nav-link active" data-scroll-target="#exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem."><strong>Exploratory Data Analysis on Reddit: Focusing on Women’s Issues in STEM.</strong></a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#dataset-descriptions" id="toc-dataset-descriptions" class="nav-link" data-scroll-target="#dataset-descriptions"><strong>Dataset Descriptions</strong></a>
+  <ul class="collapse">
+  <li><a href="#comments-dataset" id="toc-comments-dataset" class="nav-link" data-scroll-target="#comments-dataset"><strong>1. Comments Dataset</strong></a></li>
+  <li><a href="#submissions-dataset" id="toc-submissions-dataset" class="nav-link" data-scroll-target="#submissions-dataset"><strong>2. Submissions Dataset</strong></a></li>
+  </ul></li>
+  <li><a href="#table-1-subreddit-submission-and-comment-courts" id="toc-table-1-subreddit-submission-and-comment-courts" class="nav-link" data-scroll-target="#table-1-subreddit-submission-and-comment-courts"><strong>Table 1: Subreddit Submission and Comment Courts</strong></a></li>
+  <li><a href="#table-2.1-top-10-authors-by-comments" id="toc-table-2.1-top-10-authors-by-comments" class="nav-link" data-scroll-target="#table-2.1-top-10-authors-by-comments"><strong>Table 2.1: Top 10 Authors by Comments</strong></a></li>
+  <li><a href="#table-2.2-top-10-authors-by-submissions" id="toc-table-2.2-top-10-authors-by-submissions" class="nav-link" data-scroll-target="#table-2.2-top-10-authors-by-submissions"><strong>Table 2.2: Top 10 Authors by Submissions</strong></a></li>
+  <li><a href="#table-3-top-20-common-authors-by-comments-and-submissions" id="toc-table-3-top-20-common-authors-by-comments-and-submissions" class="nav-link" data-scroll-target="#table-3-top-20-common-authors-by-comments-and-submissions"><strong>Table 3: Top 20 Common Authors by Comments and Submissions</strong></a></li>
+  <li><a href="#table-4.1-comments-length-statistics" id="toc-table-4.1-comments-length-statistics" class="nav-link" data-scroll-target="#table-4.1-comments-length-statistics"><strong>Table 4.1: Comments Length Statistics</strong></a></li>
+  <li><a href="#table-4.2-submission-length-statistics" id="toc-table-4.2-submission-length-statistics" class="nav-link" data-scroll-target="#table-4.2-submission-length-statistics"><strong>Table 4.2: Submission Length Statistics</strong></a></li>
+  <li><a href="#chart-1-time-series-analysis" id="toc-chart-1-time-series-analysis" class="nav-link" data-scroll-target="#chart-1-time-series-analysis"><strong>Chart 1: Time Series Analysis</strong></a>
+  <ul class="collapse">
+  <li><a href="#chart-2-word-clouds" id="toc-chart-2-word-clouds" class="nav-link" data-scroll-target="#chart-2-word-clouds"><strong>Chart 2: Word Clouds</strong></a></li>
+  <li><a href="#chart-3-correlation-analysis" id="toc-chart-3-correlation-analysis" class="nav-link" data-scroll-target="#chart-3-correlation-analysis"><strong>Chart 3: Correlation Analysis</strong></a>
+  <ul class="collapse">
+  <li><a href="#chart-3.1-number-of-comments-vs-length-of-self-text-submissions" id="toc-chart-3.1-number-of-comments-vs-length-of-self-text-submissions" class="nav-link" data-scroll-target="#chart-3.1-number-of-comments-vs-length-of-self-text-submissions"><strong>Chart 3.1: Number of Comments v/s Length of Self Text Submissions</strong></a></li>
+  </ul></li>
+  <li><a href="#chart-4-engagement-metrics-of-number-of-comments-per-submissions" id="toc-chart-4-engagement-metrics-of-number-of-comments-per-submissions" class="nav-link" data-scroll-target="#chart-4-engagement-metrics-of-number-of-comments-per-submissions"><strong>Chart 4: Engagement Metrics of Number of Comments per Submissions</strong></a></li>
+  <li><a href="#chart-5-issues-faced-by-women-in-stem" id="toc-chart-5-issues-faced-by-women-in-stem" class="nav-link" data-scroll-target="#chart-5-issues-faced-by-women-in-stem"><strong>Chart 5: Issues faced by Women in STEM</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem."><strong>Exploratory Data Analysis on Reddit: Focusing on Women’s Issues in STEM.</strong></h2>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>Our Exploratory Data Analysis (EDA) investigates the multifaceted discussions on Reddit, a widely-used online platform where individuals from various backgrounds express their views and experiences. Our analysis concentrates on conversations related to women’s issues in STEM, a subject of profound social and cultural relevance. By scrutinizing submissions and comments across different subreddits, our goal is to glean insights into the dialogues surrounding women’s topics and their reception within the Reddit community.</p>
+<p>We’ve selected a range of subreddits for this analysis, including:</p>
+<ul>
+<li><p>r/xxstem</p></li>
+<li><p>r/Feminism</p></li>
+<li><p>r/LadiesofScience</p></li>
+<li><p>r/womenEngineers</p></li>
+<li><p>r/AskFeminists</p></li>
+<li><p>r/AskWomen</p></li>
+</ul>
+<p>Our datasets consist of 5,200,861 comments and 370,925 submissions collected from these subreddits, spanning January 2021 to March 2023. We specifically filtered the subreddits Feminism, AskFeminists, and AskWomen using STEM-related keywords to focus our research.</p>
+</section>
+<section id="dataset-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-descriptions"><strong>Dataset Descriptions</strong></h2>
+<section id="comments-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="comments-dataset"><strong>1. Comments Dataset</strong></h3>
+<p>The comments dataset includes data about individual comments made on Reddit posts. The columns are as follows:</p>
+<ul>
+<li><p><u>subreddit</u>: The name of the subreddit where the comment was posted. Subreddits are specific forums or communities within Reddit, often centered around a particular topic or theme.</p></li>
+<li><p><u>author</u>: The username of the Reddit user who posted the comment.</p></li>
+<li><p><u>body</u>: The actual text content of the comment.</p></li>
+<li><p><u>parent_id</u>: The ID of the parent post or comment to which this comment is a reply. If the comment is a direct response to a post, the parent_id will correspond to the post’s ID. If it’s a reply to another comment, the parent_id will be the ID of that comment.</p></li>
+<li><p><u>link_id</u>: The ID of the Reddit post to which the comment is attached. This helps in linking comments back to the original submission.</p></li>
+<li><p><u>id</u>: A unique identifier for the comment.</p></li>
+<li><p><u>created_utc</u>: The timestamp of when the comment was created, in UTC format. This is useful for analyzing the timing and frequency of comments.</p></li>
+<li><p><u>score</u>: The net score of the comment, calculated as the total number of upvotes minus the total number of downvotes.</p></li>
+</ul>
+</section>
+<section id="submissions-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="submissions-dataset"><strong>2. Submissions Dataset</strong></h3>
+<p>The submissions dataset contains information about individual posts made on Reddit. The columns are as follows:</p>
+<ul>
+<li><p><u>subreddit</u>: Similar to the comments dataset, this indicates the subreddit where the submission was posted.</p></li>
+<li><p><u>author</u>: The username of the Reddit user who made the submission.</p></li>
+<li><p><u>title</u>: The title of the Reddit post or submission.</p></li>
+<li><p><u>selftext</u>: The body text of the submission. This is usually the main content of the post, often providing details or context beyond the title. In some posts (like image or link posts), this might be empty.</p></li>
+<li><p><u>created_utc</u>: The timestamp for when the submission was created, in UTC format.</p></li>
+<li><p><u>num_comments</u>: The total number of comments that have been made in response to the submission. This is a good indicator of how much engagement or discussion a post has generated.</p></li>
+<li><p><u>score</u>: Similar to comments, this is the net score of the submission, calculated as the total number of upvotes minus the total number of downvotes.</p></li>
+</ul>
+</section>
+</section>
+<section id="table-1-subreddit-submission-and-comment-courts" class="level2">
+<h2 class="anchored" data-anchor-id="table-1-subreddit-submission-and-comment-courts"><strong>Table 1: Subreddit Submission and Comment Courts</strong></h2>
+<p><img src="images/subreddit_counts_table.png" class="img-fluid"></p>
+<p>Table 1 provides data on the activity in various Reddit subreddits, detailing the number of submissions and comments for each. It shows that “AskWomen” is the most active subreddit with the highest counts, while “xxstem” has the least, suggesting a wide range of user engagement across these forums.</p>
+</section>
+<section id="table-2.1-top-10-authors-by-comments" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.1-top-10-authors-by-comments"><strong>Table 2.1: Top 10 Authors by Comments</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top10_author_comments.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p>Table 2.1 lists Reddit authors and the number of comments they have made. The table is ranked from the highest to the lowest number of comments. The author ‘kaeorin’ is at the top with 3,321 comments, followed by ‘msstark’ with 2,181 comments, and so on, with ‘avocado-nightmare’ at the tenth position with 735 comments. This table highlights the most active commenters, presumably within a specific subreddit or across Reddit.</p>
+</section>
+<section id="table-2.2-top-10-authors-by-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.2-top-10-authors-by-submissions"><strong>Table 2.2: Top 10 Authors by Submissions</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top10_author_submissions.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p>Table 2.2 shows Reddit authors alongside the number of submissions they have made. The author ‘Sidjoneya’ leads with 106 submissions, closely followed by ‘EdwardHeisler’ with 105, and the list descends to ‘HyenaJack94’ at the bottom with 20 submissions. This table ranks the authors based on their contributions in terms of original content submissions to a subreddit or across multiple subreddits.</p>
+</section>
+<section id="table-3-top-20-common-authors-by-comments-and-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="table-3-top-20-common-authors-by-comments-and-submissions"><strong>Table 3: Top 20 Common Authors by Comments and Submissions</strong></h2>
+<p><img src="images/top20_common_authors_table.png" class="img-fluid" width="2500"></p>
+<p>Table 3 ranks Reddit authors based on their engagement, detailing their number of comments, the total score of these comments, the number of submissions, and the total score of these submissions. The table indicates not only who is most active in terms of quantity but also gives insight into the community’s reception to their contributions through the score metrics.</p>
+</section>
+<section id="table-4.1-comments-length-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.1-comments-length-statistics"><strong>Table 4.1: Comments Length Statistics</strong></h2>
+<p><img src="images/comments_length_stats.png" class="img-fluid">Table 4.1 displays statistics on the lengths of comments, likely from a social media platform or forum. It shows the minimum length of a comment as 1 character, the maximum length as 10,103 characters, and the average length as 361.733 characters. The median length of comments is 428 characters, which is the middle value in the list of all comment lengths, and the standard deviation is 781.748, indicating the amount of variation or dispersion from the average comment length. This table helps understand the typical comment length and the range of comment lengths being made.</p>
+</section>
+<section id="table-4.2-submission-length-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.2-submission-length-statistics"><strong>Table 4.2: Submission Length Statistics</strong></h2>
+<p><img src="images/submission_length_stats.png" class="img-fluid"></p>
+<p>Table 4.2 is statistics regarding the length of submissions. It lists the minimum length as 0 characters, suggesting that there may be submissions without any text content, possibly only containing a title or an image. The maximum length is 37,983 characters, which indicates a highly detailed submission. The average length of submissions is 514.986 characters, providing an idea of the typical submission length, with a median length of 9 characters, suggesting that more than half of the submissions are very short. The standard deviation is 1365.61, indicating a wide spread in the lengths of submissions, signifying a diverse range of submission lengths.</p>
+</section>
+<section id="chart-1-time-series-analysis" class="level1">
+<h1><strong>Chart 1: Time Series Analysis</strong></h1>
+<section id="chart-1.1-subreddit-wise-analysis-over-time" class="level4">
+<h4 class="anchored" data-anchor-id="chart-1.1-subreddit-wise-analysis-over-time"><strong>Chart 1.1: Subreddit Wise Analysis over Time</strong></h4>
+<p>The visualization is split into two parts, each representing a different aspect of the Reddit data:</p>
+<ol type="1">
+<li><p><strong>Submissions</strong>: This part of the chart shows the number of posts submitted over time in each subreddit. It reflects the frequency of topics being initiated by users and serves as an indicator of interest in specific subjects or events.</p></li>
+<li><p><strong>Comments</strong>: This section illustrates the number of comments made in each subreddit, offering insights into the level of engagement and discussion generated by the submissions.</p></li>
+</ol>
+<p>Both submissions and comments are plotted as time series data, allowing users to observe how the activity changes over days, months, and years.</p>
+<iframe src="plots/timeseries_comments_submissions.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>Our time-series analysis reveals intriguing trends in Reddit discussions across various subreddits focused on women’s issues. Notably, r/AskWomen emerges as a prominent hub for engagement, particularly evident in April 2022, where it experienced a peak in submissions. This surge suggests a heightened interest or a specific event that sparked extensive discussions during this period. Similarly, r/Feminism also shows significant activity, trailing closely behind r/AskWomen in the volume of submissions. In terms of comments, the trend aligns somewhat with the comments data. r/AskWomen consistently leads in generating the most commentary, reaching its zenith around January 2022. This peak in comments could be attributed to specific discussions or events that resonated deeply with the subreddit’s audience. Following r/AskWomen, r/AskFeminists also demonstrates considerable engagement, reinforcing its position as a key space for discourse on feminist issues.</p>
+</section>
+<section id="chart-1.2-hour-wise-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="chart-1.2-hour-wise-analysis"><strong>Chart 1.2: Hour-wise Analysis</strong></h4>
+<p>Our hourly analysis of Reddit activity, focusing on both submissions and comments, provides a fascinating glimpse into user behavior patterns throughout the day. This interactive chart showcases the distribution of submissions and comments across different hours, offering insights into when users are most active on the platform.</p>
+<p>The chart features two primary traces: one for submissions and another for comments. Each trace captures the count of submissions or comments made during each hour of the day, offering a clear visual representation of activity peaks and troughs.</p>
+<iframe src="plots/timeseries_hourly_analysis.html" width="800" height="600">
+</iframe>
+<p>In our hour-by-hour analysis of Reddit activity, we observe distinct patterns in both submissions and comments that reflect the daily rhythms of user engagement. The data reveals notable trends in the timing of these activities. In the submissions data, the volume of submissions gradually increases during the afternoon, peaking between 4 PM and 5 PM. This trend suggests that users are most active in creating new content towards the late afternoon, possibly as they wind down their work or daily activities. Conversely, the early morning hours, specifically from 6 AM to 9 AM, see the lowest level of submissions. This dip could be attributed to typical sleeping hours for many users, resulting in reduced activity on the platform.In the comments data, a similar pattern is observed, where user engagement in discussions also reaches its zenith around 5 PM. This peak in commenting activity could indicate a time when users are more available or inclined to engage in conversations after completing day-to-day responsibilities. Like submissions, comment activity is at its lowest around 9 AM, aligning with morning routines where users might be less available to participate in online discussions.</p>
+</section>
+<section id="chart-1.3-day-wise-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="chart-1.3-day-wise-analysis"><strong>Chart 1.3: Day-wise analysis</strong></h4>
+<p>In this day-wise analysis, we examine the patterns of user activity on Reddit, specifically focusing on the number of submissions and comments made each day of the week. This approach allows us to understand the fluctuations in engagement and content creation across different days, providing insights into user behavior within the Reddit community.</p>
+<p>Each trace captures the count of submissions or comments made during each day of the week, offering a clear visual representation of activity peaks and troughs.</p>
+<iframe src="plots/timeseries_day_analysis.html" width="800" height="600">
+</iframe>
+<p>In our day-wise analysis, we observed consistent trends in user engagement within the context of submissions and comments on Reddit. This analysis offers a nuanced understanding of user activity patterns, especially in relation to topics centered around women’s issues.</p>
+<p>In the Submissions data, we observe a relatively uniform distribution of submissions throughout the week, with only slight variations in volume. Notably, Tuesday emerges as the day with the highest number of submissions, followed closely by Friday. This pattern suggests a mid-week surge in user activity, possibly reflecting the community’s content posting habits. On the other end of the spectrum, Sunday shows the lowest level of submission activity, pointing to a weekend dip in user engagement. The comments data mirrors the submissions trend to a large extent. This consistency in user interaction—both in terms of content creation and engagement through comments—highlights a well-defined rhythm in the online community’s behavior.</p>
+</section>
+<section id="chart-2-word-clouds" class="level2">
+<h2 class="anchored" data-anchor-id="chart-2-word-clouds"><strong>Chart 2: Word Clouds</strong></h2>
+<p>The word cloud visualizations for comments and submissions in our dataset offer an insightful and visually compelling way to understand the most prominent themes and topics being discussed in relation to women’s issues on Reddit. These word clouds are generated from a comprehensive collection of text data, encompassing both comments and submissions across various subreddits focused on women’s issues in STEM.</p>
+<p>These word clouds are not just aesthetic visualizations but powerful analytical tools. They distill large volumes of text data into easily interpretable formats, enabling us to quickly grasp the core topics of conversation. For researchers, community moderators, and social analysts, these insights are invaluable for understanding the pulse of online discussions and tailoring strategies for engagement and content creation accordingly.</p>
+<section id="chart-2.1-submissions-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="chart-2.1-submissions-dataset"><strong>Chart 2.1: Submissions Dataset</strong></h4>
+<p><img src="images/wordcloud_submissions-01.png" class="img-fluid"></p>
+<p>The word cloud for submissions distills the essence of topics being posted. It reveals the central themes around which submissions are centered, offering a snapshot of the subjects that are prompting discussions. The visualization of submission data emphasizes the driving forces behind content creation on these subreddits, providing a direct insight into the interests and concerns of the Reddit community in the context of women’s issues in STEM. The emphasis on words like “work” and “men,” alongside “women,” suggests a significant focus on gender dynamics in professional settings and societal roles. The presence of words like “know,” “think,” and “want” reflects the community’s inclination towards sharing knowledge, opinions, and desires, highlighting a vibrant exchange of ideas and perspectives.</p>
+</section>
+<section id="chart-2.2-comments-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="chart-2.2-comments-dataset"><strong>Chart 2.2: Comments Dataset</strong></h4>
+<p><img src="images/wordcloud_comments.png" class="img-fluid"></p>
+<p>The word cloud for comments provides a visual representation of the most frequently used words in the comments section. The larger the word in the cloud, the more frequently it appears in the dataset. This visualization helps us identify the key themes and topics that dominate user discussions. The exclusion of common stopwords, along with specific terms like “removed” and “deleted,” ensures that the word cloud is focused on meaningful content. This refined approach highlights the nuances in the conversations happening in the comments. he comments word cloud similarly underscores words such as “women,” “people,” “think,” “want,” “question,” “time,” and “work.” The recurrence of “question” signifies a high level of engagement and inquiry within the community, with users actively seeking or providing information and clarification. The overlap of words like “women,” “work,” and “think” in both comments and submissions points to a consistent dialogue about women’s roles and perceptions in society.</p>
+</section>
+</section>
+<section id="chart-3-correlation-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="chart-3-correlation-analysis"><strong>Chart 3: Correlation Analysis</strong></h2>
+<section id="chart-3.1-number-of-comments-vs-length-of-self-text-submissions" class="level3">
+<h3 class="anchored" data-anchor-id="chart-3.1-number-of-comments-vs-length-of-self-text-submissions"><strong>Chart 3.1: Number of Comments v/s Length of Self Text Submissions</strong></h3>
+<p>The interactive scatter plot we created provides an insightful visualization of the relationship between the length of self-text in submissions and the number of comments they receive on Reddit. By plotting these two variables against each other and computing their correlation coefficient, we can understand how the content’s length might influence user engagement in terms of comments.</p>
+<iframe src="plots/correlation_analysis_interactive.html" width="800" height="600">
+</iframe>
+<p>The correlation analysis between the number of comments and the length of self-text in Reddit submissions reveals a relatively weak positive correlation, as indicated by a correlation coefficient of 0.1. This suggests a slight tendency for posts with longer self-text to attract a marginally higher number of comments, but the relationship is not strongly pronounced. The majority of data points are concentrated within a specific range — with self-text lengths mostly between 0 to 10,000 characters and the number of comments typically ranging from 0 to 600. This concentration suggests that most Reddit submissions are relatively concise, and the corresponding comments are within a moderate count. The plot likely shows a cloud of points with no distinct linear pattern, reflecting the weak correlation. The spread of points across the plot indicates the variability in how different lengths of self-text correlate with the number of comments. For content creators and community managers, the weak correlation suggests that focusing solely on the length of posts may not be a significant factor in driving engagement, as measured by the number of comments.</p>
+</section>
+</section>
+<section id="chart-4-engagement-metrics-of-number-of-comments-per-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="chart-4-engagement-metrics-of-number-of-comments-per-submissions"><strong>Chart 4: Engagement Metrics of Number of Comments per Submissions</strong></h2>
+<p>The engagement metric analysis focuses on understanding the distribution of the number of comments per submission across different subreddits. This examination is crucial for gauging how actively users engage with content in various subreddit communities. Submissions were grouped by subreddit, with the number of comments per submission collected and aggregated. For each subreddit, a histogram was created to represent the frequency distribution of the number of comments. These histograms were initially set to be invisible to manage the plot’s clarity.</p>
+<iframe src="plots/subreddit_comments_distribution_interactive.html" width="800" height="600">
+</iframe>
+<p>The analysis of the histogram distributions for each subreddit reveals insightful trends and disparities in user engagement, particularly in terms of the frequency and volume of comments per submission.</p>
+<ol type="1">
+<li><p><strong>r/xxstem:</strong></p>
+<ul>
+<li><p><strong>Low to Moderate Engagement:</strong> A significant number of users (273) commented between 0-1 times, indicating a prevalence of minimal engagement.</p></li>
+<li><p><strong>Peak Engagement:</strong> The chart shows that the highest engagement, albeit rare, reached up to 47 comments per submission, demonstrating instances of higher interaction.</p></li>
+</ul></li>
+<li><p><strong>r/Feminism:</strong></p>
+<ul>
+<li><p><strong>Broad Range of Engagement:</strong> The subreddit exhibits a wider range of engagement, with 734 people commenting 0-1 times.</p></li>
+<li><p><strong>High Engagement Instances:</strong> Some submissions received a maximum of 250 comments, highlighting particular topics or posts that resonated strongly with the community.</p></li>
+</ul></li>
+<li><p><strong>r/AskWomen and r/AskFeminists:</strong></p>
+<ul>
+<li><strong>High Engagement Levels:</strong> These subreddits showcased the highest levels of engagement among the analyzed groups. This suggests that these communities are highly active, with numerous users participating in discussions.</li>
+</ul></li>
+<li><p><strong>r/LadiesofScience:</strong></p>
+<ul>
+<li><strong>Lower Engagement:</strong> This subreddit exhibited the lowest engagement levels, as indicated by the lower frequency and volume of comments per submission.</li>
+</ul>
+<p>The varying levels of engagement across these subreddits reflect different community dynamics and interests. Subreddits like r/AskWomen and r/AskFeminists likely foster environments that encourage more active participation and discussion. The higher engagement in certain subreddits may also indicate that the content or topics discussed are more resonant or provocative, prompting more users to comment. For content creators or community managers, these insights can guide strategies for engagement, content creation, and community building. Understanding which subreddits have higher engagement can help in targeting content more effectively. The histogram distributions provide a clear visual representation of engagement levels across various subreddits. They highlight not only the frequency of comments but also the intensity of interaction within each community. This analysis is pivotal for understanding the social dynamics of these online communities and can inform strategies for engagement and content optimization.</p></li>
+</ol>
+</section>
+<section id="chart-5-issues-faced-by-women-in-stem" class="level2">
+<h2 class="anchored" data-anchor-id="chart-5-issues-faced-by-women-in-stem"><strong>Chart 5: Issues faced by Women in STEM</strong></h2>
+<p>This interactive visualization provides a comprehensive overview of various issues faced by women in STEM as discussed on Reddit, both in submissions and comments. By employing a detailed categorization of issues, we can discern the prominence and frequency of each topic within the Reddit community. The analysis categorizes a wide range of issues, including Workplace Discrimination, Gender Equality, Healthcare. This broad spectrum allows for a nuanced understanding of the different facets of challenges and discussions surrounding women’s issues in STEM. The data is meticulously gathered from comments and submissions, using regex patterns to identify relevant discussions. Separate counts for each issue in both comments and submissions provide a dual perspective on the discourse.</p>
+<iframe src="plots/piechart.html" width="800" height="600">
+</iframe>
+<p><strong>Submissions Dataset Insights:</strong></p>
+<ul>
+<li><p><strong>Education as a Leading Topic:</strong> The submissions data shows that a significant 36% of the discourse focuses on education-related issues. This high percentage underscores the importance and relevance of educational matters in discussions about women’s issues on Reddit.</p></li>
+<li><p><strong>Gender Equality:</strong> With 20% of the submissions addressing gender equality, this topic emerges as a critical area of concern. It reflects the ongoing dialogue surrounding feminism and the pursuit of equal rights and opportunities for women.</p></li>
+<li><p><strong>Workplace Discrimination:</strong> Accounting for 9.5% of the submissions, workplace discrimination remains a notable issue. This percentage highlights the challenges women face in professional settings, including unequal treatment, bias, and barriers to career advancement.</p></li>
+</ul>
+<p><strong>Comments Dataset Insights:</strong></p>
+<ul>
+<li><p><strong>Education Remains a Central Theme:</strong> Similar to submissions, education dominates the comments section, comprising 37% of the discussion. This consistency across both datasets indicates a strong, community-wide focus on educational issues affecting women.</p></li>
+<li><p><strong>Color and Racial Issues:</strong> The comments give considerable attention (28%) to issues of race and ethnicity, labeled here as “Color.” This high percentage reflects the intersectionality of gender with racial and ethnic identity, underscoring the diverse experiences of women from different backgrounds.</p></li>
+<li><p><strong>Marriage and Divorce:</strong> Discussions related to marriage and divorce represent 14% of the comments, signifying a substantial interest in the personal and legal aspects of these topics.</p></li>
+</ul>
+<p>The analysis highlights key areas of focus in the context of women’s issues, with education being a prominent theme in both submissions and comments. This underlines the importance of education in the discourse around women’s rights and empowerment. The significant attention given to color and racial issues in the comments section points to an awareness and concern within the Reddit community regarding the complexities of women’s experiences as they intersect with race and ethnicity. The variation in topics between submissions and comments suggests differing dynamics in how issues are introduced (submissions) versus how they are discussed or debated (comments).</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 23] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/anly503/lab-2.1">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

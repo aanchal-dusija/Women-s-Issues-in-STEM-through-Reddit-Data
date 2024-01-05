@@ -1,0 +1,39 @@
+# Feedback
+
+## Overall Impression:
+
+**Question 1**: You describe the process of getting subreddit data by saying "The process of compiling our dataset from Reddit was conducted with meticulous attention to detail and a targeted focus.", but we are curious how you went about finding these subreddits and perhaps if there were any that you ultimately decided to not include?
+
+**Response**: When picking subreddits for our data, we first spotted a variety of subreddits with attention to user involvement and content significance. But we ruled out some subreddits because of less activity, scant content, or moral issues. We kept our data's pertinence and wholeness, and stuck to research norms which were within the interest of our topic.
+
+## Project Plan
+
+**Question 2**: We think it may be helpful to the reader to clearly categorize which questions fall under which category (EDA vs NLP vs ML), but this is up to you. All of these goals are relevant to your topic and will provide great findings to discuss. Our most common criticism of them is just to add some clarification here and there. Great work!
+
+**Response**: Thank you for your suggestion, we have modified our Summary page to catgorize the business goals. Additionally, we have updated our Business Goals to make them more crisp and clear as per your feedback :)
+
+## EDA Work
+
+**Question 3:** Make clear to reader whether Moderators can be in the top X# of frequent posters or not. Their inclusion could be of no benefit, since moderators sometimes have to post often.
+
+**Response**: We skip moderator information in our evaluation because we're examining only user dialogue, not supervisory roles. Digging into moderator details can get tangled and does not line up with our main study goals.
+
+**Question 4:** Is it possible to include with the submission length statistics table, the type of posts? Meaning Image vs Text vs Link to another site. It may not be, but we think it would be worthwhile to mention it.
+
+**Response**: While doing this might have been insightful, we wanted an overview of the text only since it would set the stage for going forward with Natural Language Processing and Machine Learning Techniques.
+
+**Question 5:** Possibly break down WordClouds by subreddit of interest? Perhaps you all have investigated this already. It may add more visuals to look at without providing any more meaningful findings, but it's a thought.
+
+**Response**: Thank you for this feedback. We did create WordClouds for each subreddit to unravel new words in conversation but since they were similar, we decided to make a WordCloud for the aggregate text of comments and submissions respectively. We have now discarded the WordClouds from our EDA page and created new WordClouds on our NLP page after data preprocessing to get a better understanding of conversations in Reddit for Women in STEM.
+
+**Question 6:** Pie Chart Legend Category colors between Comments vs Submissions. This may not be easy to fix. If it can't be done, you may want to point out to the reader to pay attention to each category's color and not flip quickly back and forth to draw conclusions.
+
+**Response**: Thank you for your insight, I have modified the piechart so that the Legend Categories have the same color scheme for both comments and submissions data.
+
+## NLP Work
+
+No Feedback Provided.
+
+## ML Work
+
+No Feedback Provided.
