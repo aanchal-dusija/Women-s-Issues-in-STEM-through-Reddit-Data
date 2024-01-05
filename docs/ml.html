@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Focusing on Women's Issues in STEM – ml</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Focusing on Women’s Issues in STEM</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./introduction.html" rel="" target="">
+ <span class="menu-text">Summary</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html" rel="" target="">
+ <span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html" rel="" target="">
+ <span class="menu-text">NLP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./ml.html" rel="" target="" aria-current="page">
+ <span class="menu-text">ML</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.html" rel="" target="">
+ <span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#machine-learning-focusing-on-womens-issues-in-stem" id="toc-machine-learning-focusing-on-womens-issues-in-stem" class="nav-link active" data-scroll-target="#machine-learning-focusing-on-womens-issues-in-stem">Machine Learning: Focusing on Women’s Issues in STEM</a></li>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#data-pre-processing" id="toc-data-pre-processing" class="nav-link" data-scroll-target="#data-pre-processing">Data Pre-processing</a></li>
+  <li><a href="#can-you-predict-a-submissions-score-based-on-its-text" id="toc-can-you-predict-a-submissions-score-based-on-its-text" class="nav-link" data-scroll-target="#can-you-predict-a-submissions-score-based-on-its-text">Can you predict a submission’s score based on its text?</a>
+  <ul class="collapse">
+  <li><a href="#table-1.1---model-comparison" id="toc-table-1.1---model-comparison" class="nav-link" data-scroll-target="#table-1.1---model-comparison">Table 1.1 - Model Comparison</a></li>
+  <li><a href="#chart-1.1---model-comparison" id="toc-chart-1.1---model-comparison" class="nav-link" data-scroll-target="#chart-1.1---model-comparison">Chart 1.1 - Model Comparison</a></li>
+  </ul></li>
+  <li><a href="#can-we-predict-which-subreddit-a-submission-came-from-between-based-on-the-text-of-the-submission" id="toc-can-we-predict-which-subreddit-a-submission-came-from-between-based-on-the-text-of-the-submission" class="nav-link" data-scroll-target="#can-we-predict-which-subreddit-a-submission-came-from-between-based-on-the-text-of-the-submission">Can we predict which subreddit a submission came from between based on the text of the submission?</a>
+  <ul class="collapse">
+  <li><a href="#chart-2.1---confusion-matrix" id="toc-chart-2.1---confusion-matrix" class="nav-link" data-scroll-target="#chart-2.1---confusion-matrix">Chart 2.1 - Confusion Matrix</a></li>
+  <li><a href="#table-2.1---model-comparison" id="toc-table-2.1---model-comparison" class="nav-link" data-scroll-target="#table-2.1---model-comparison">Table 2.1 - Model Comparison</a></li>
+  <li><a href="#chart-2.2---auroc-comparison" id="toc-chart-2.2---auroc-comparison" class="nav-link" data-scroll-target="#chart-2.2---auroc-comparison">Chart 2.2 - AUROC Comparison</a></li>
+  </ul></li>
+  <li><a href="#finding-common-themes-in-the-subreddit-xxstem-using-clustering-techniques" id="toc-finding-common-themes-in-the-subreddit-xxstem-using-clustering-techniques" class="nav-link" data-scroll-target="#finding-common-themes-in-the-subreddit-xxstem-using-clustering-techniques">Finding Common Themes in the Subreddit “xxstem” Using Clustering Techniques</a>
+  <ul class="collapse">
+  <li><a href="#k-means-clustering" id="toc-k-means-clustering" class="nav-link" data-scroll-target="#k-means-clustering">K-Means Clustering</a></li>
+  <li><a href="#chart-3.1---pca-of-k-means-clustering" id="toc-chart-3.1---pca-of-k-means-clustering" class="nav-link" data-scroll-target="#chart-3.1---pca-of-k-means-clustering">Chart 3.1 - PCA of K-Means Clustering</a></li>
+  <li><a href="#hierarchial-clustering" id="toc-hierarchial-clustering" class="nav-link" data-scroll-target="#hierarchial-clustering">Hierarchial Clustering</a></li>
+  <li><a href="#chart-3.2---dendogram" id="toc-chart-3.2---dendogram" class="nav-link" data-scroll-target="#chart-3.2---dendogram">Chart 3.2 - Dendogram</a></li>
+  <li><a href="#table-3.1---comparing-clustering-techniques" id="toc-table-3.1---comparing-clustering-techniques" class="nav-link" data-scroll-target="#table-3.1---comparing-clustering-techniques">Table 3.1 - Comparing Clustering Techniques</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="machine-learning-focusing-on-womens-issues-in-stem" class="level1">
+<h1>Machine Learning: Focusing on Women’s Issues in STEM</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ml.webp" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="executive-summary" class="level1">
+<h1>Executive Summary</h1>
+<p>Our machine learning project has three main objectives:</p>
+<p>1. To study the text data from Reddit and predict the scores for each submission using its text.</p>
+<p>2. To classify the content of different posts based on what subreddit they belong to.</p>
+<p>3. To use methods of grouping data to identify usual themes in subreddit “xxstem”.</p>
+<p>Before we analyzed our data, we preprocessed our data by getting rid of unwanted parts like URLs, non-alphabets, stop words, and more. We used several machine learning models on our Reddit Data. These models gave us interesting details about our study area. We ran Regression and Classification Analysis from Supervised Learning on our data. This allowed us to study machine learning models from different angles. We also looked at Unsupervised Learning Techniques. We used it to find common themes with K-Means and Hierarchical Clustering. The Random Forest Regressor did the best job at predicting scores of submissions. Naive Bayes did the best job at finding out which subreddit each text came from. K-Means Clustering did better than Hierarchical Clustering, according to the Silhouette Score assessment.</p>
+<p>We displayed our assessment with tables and charts. This helped show our findings about how models evaluate and compare.</p>
+</section>
+<section id="data-pre-processing" class="level1">
+<h1>Data Pre-processing</h1>
+<p>We began a deep dive into data cleanup, key for better machine learning models. We first used a special function to clean all text data. We made text lowercase, cut out non-alphabet characters and erased websites. Doing this removed any unhelpful information. Next, we split cleaned text into separate words, for comments and entries. We realized that common words don’t help much. So, we removed them with a StopWordsRemover tool, which got rid of unnecessary words. Lastly, in a simple step, we combined the filtered titles and individual words from entries. This intense cleanup process set a stable groundwork for separating the data into training and testing groups. And that in turn, allowed for model training and evaluation as we strived to understand the complex world of Reddit data.</p>
+</section>
+<section id="can-you-predict-a-submissions-score-based-on-its-text" class="level1">
+<h1>Can you predict a submission’s score based on its text?</h1>
+<p>We used diverse ways to estimate the scores of Reddit posts based on text. We turned text data into numbers through a CountVectorizer and an IDF. We divided the data into training and testing groups with an 80-20 ratio. Next, we tried out a few different models including Linear Regression, Random Forest, Gradient Boosted Trees (GBT), and Decision Tree. This helped us see how interesting a post might be based on its text.</p>
+<p>A couple of metrics helped us see how well each model worked. We used Root Mean Squared Error (RMSE) and R-square. The R-square values let us know what percentage of score differences the models can explain. The RMSE values show the average distance between the scores our models predicted and the real scores.</p>
+<section id="table-1.1---model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="table-1.1---model-comparison">Table 1.1 - Model Comparison</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/reg_table.png" class="img-fluid figure-img" width="467"></p>
+</figure>
+</div>
+</section>
+<section id="chart-1.1---model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="chart-1.1---model-comparison">Chart 1.1 - Model Comparison</h2>
+<iframe src="images/regression.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>We checked four prediction models’ effectiveness, simply put, Linear Regression, Random Forest Regressor, GBTRegressor, and DecisionTreeRegressor, in estimating the Reddit post points based on text data. We used Root Mean Squared Error (RMSE) and R-Square to judge their performance. Among all, the Random Forest Regressor did the best with the smallest RMSE (116.964) and the largest R-square (38.7477). We also created an easy-to-understand bar chart using plotly to compare the models’ effectiveness visually. This chart lets us compare each model’s effectiveness at a glance.</p>
+</section>
+</section>
+<section id="can-we-predict-which-subreddit-a-submission-came-from-between-based-on-the-text-of-the-submission" class="level1">
+<h1>Can we predict which subreddit a submission came from between based on the text of the submission?</h1>
+<p>We sorted Reddit posts into distinct subreddits using their textual content. We used a thorough method for this multi-class sorting problem. First, we selected just 350 posts from every subreddit. This balanced our data and gave equal weight to each category. Next, we merged the titles and selftext into one text column. This merged text was then broken down and changed into a form our machine learning models could use. We split our data into a training and testing set. 80% was for training, and 20% was for testing. We tested four models: Logistic Regression, Random Forest, Naive Bayes, and Decision Tree. To see how well each model predicted each subreddit, we looked at their accuracy, F-1 scores, recall, precision, confusion matrix, and roc curves.</p>
+<section id="chart-2.1---confusion-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="chart-2.1---confusion-matrix">Chart 2.1 - Confusion Matrix</h2>
+<iframe src="images/CF.html" width="800" height="600" style="float: center;">
+</iframe>
+<p>We made a confusion matrix for all the models. It helps assess how well models can place texts to their matching subreddit. Four performance indicators are on display- Logistic Regression, Random Forest, Naive Bayes, and Decision Tree. Each shines differently. Logistic Regression walks the middle ground perfectly - good at scoring the right instances and getting it accurate on the whole. Random Forest is the star at finding positive cases. But, this comes with more false positives. So, it hits its accuracy and usefulness slightly. On the other hand, Naive Bayes is great at dodging false positives. It’s the MVP of overall accuracy, just missing some positive cases.</p>
+</section>
+<section id="table-2.1---model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.1---model-comparison">Table 2.1 - Model Comparison</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/class_table.png" class="img-fluid figure-img" width="677"></p>
+</figure>
+</div>
+<p>We’re looking at a table showing how well Logistic Regression, Random Forest, Naive Bayes, and Decision Tree did at sorting submissions. Each got a score for Precision, Recall, F1, and Accuracy. Logistic Regression did okay overall, and stood out for its good F1 score, which tells us it caught quite a bit of the good stuff and was pretty accurate. Random Forest was great at spotting the good submissions but it sometimes thought a bad one was good, which hurt its F1 score and accuracy. Naive Bayes was the star at not picking out the bad ones as good, which gave them top overall accuracy even if they missed some good ones. The Decision Tree showed a moderate performance with relatively higher recall but lower precision, leading to more false positives compared to Logistic Regression and Naive Bayes. Overall, the choice of model depends on the specific requirements of the task: Naive Bayes is better for minimizing false positives, Logistic Regression for a balanced approach, and Random Forest and Decision Tree for maximizing positive cases.</p>
+</section>
+<section id="chart-2.2---auroc-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="chart-2.2---auroc-comparison">Chart 2.2 - AUROC Comparison</h2>
+<iframe src="images/ROC.html" width="800" height="600" style="float: center;">
+</iframe>
+<p>Based on the ability to classify the subreddit based on the text of submissions, the Area Under the Receiver Operating Characteristic Curve (AUROC curve) compares four machine learning models: Random Forest, Decision Tree, Naive Bayes, and Logistic Regression. When true positives are identified while maintaining a moderate level of overall accuracy, Logistic Regression offers a well-rounded performance. Although it includes a higher number of false positives than true positives, Random Forest is very good at detecting positive cases, which reduces its overall accuracy and precision. Though it occasionally overlooks true positive cases, Naive Bayes is the best at reducing false positives, yielding the highest accuracy. With a tendency to identify positive cases, the Decision Tree performs well.</p>
+</section>
+</section>
+<section id="finding-common-themes-in-the-subreddit-xxstem-using-clustering-techniques" class="level1">
+<h1>Finding Common Themes in the Subreddit “xxstem” Using Clustering Techniques</h1>
+<section id="k-means-clustering" class="level2">
+<h2 class="anchored" data-anchor-id="k-means-clustering">K-Means Clustering</h2>
+<p>First we filter and pick the subreddit “xxstem”. Then, we use the altered features in a K-Means clustering process, which forms 3 groups from the comments. K-Means, a sought-after method, divides data into clusters. Each comment associates with the cluster that has the nearest mean value. We set up a Pipeline. This contains all steps: vectorization, TF-IDF, and K-Means clustering. Train the model on the comments data. The model then predicts each comment’s belonging cluster. Next is checking how good the clustering is. We use the Silhouette Score - a score that shows how similar a comment is to its own cluster versus others.</p>
+</section>
+<section id="chart-3.1---pca-of-k-means-clustering" class="level2">
+<h2 class="anchored" data-anchor-id="chart-3.1---pca-of-k-means-clustering">Chart 3.1 - PCA of K-Means Clustering</h2>
+<iframe src="images/pca.html" width="800" height="600" style="float: center;">
+</iframe>
+<p>Principal Component Analysis, or PCA, is used to simplify the dense TF-IDF features down to two aspects. This key simplification helps visualize the clusters on a 2D graph. This graph presents the info points (comments) mapped onto the chief two parts (PCA1 and PCA2). All dots on the graph stand for a single comment. The distinct hue of the comments is a reflection of the group they’ve been put into by the K-Means method. Spotting clusters that overlap shows similarities amongst groups.</p>
+</section>
+<section id="hierarchial-clustering" class="level2">
+<h2 class="anchored" data-anchor-id="hierarchial-clustering">Hierarchial Clustering</h2>
+<p>We did a build-up style of grouping, known as agglomerative hierarchical clustering. This was done by first preparing the comments. Then, we used TF-IDF to pull out important words. Afterward, we changed those parts into groupings that we could use. Hierarchical clustering was helpful for creating layers of groups. We demonstrated our findings with a graph called a dendrogram.</p>
+</section>
+<section id="chart-3.2---dendogram" class="level2">
+<h2 class="anchored" data-anchor-id="chart-3.2---dendogram">Chart 3.2 - Dendogram</h2>
+<iframe src="images/dendrogram.html" width="800" height="600" style="float: center;">
+</iframe>
+<p>This tree-shaped visual clearly shows how clusters form at each step, which helps with choosing the best number of clusters. We picked 3 to keep our analysis from being too specific. We also got the Silhouette Score to measure our outcomes quantitatively.</p>
+</section>
+<section id="table-3.1---comparing-clustering-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="table-3.1---comparing-clustering-techniques">Table 3.1 - Comparing Clustering Techniques</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cluster.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+<p>The table plainly displays how K-means and Hierarchical clustering procedures do in Silhouette Scores. K-means gets a top score. This score hints better groupings for our study in pinpointing reoccurring topics in the ‘xxstem’ subreddit.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 23] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-23/">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

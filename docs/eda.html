@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Focusing on Women's Issues in STEM – eda</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Focusing on Women’s Issues in STEM</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./introduction.html" rel="" target="">
+ <span class="menu-text">Summary</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./eda.html" rel="" target="" aria-current="page">
+ <span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html" rel="" target="">
+ <span class="menu-text">NLP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html" rel="" target="">
+ <span class="menu-text">ML</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.html" rel="" target="">
+ <span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." id="toc-exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." class="nav-link active" data-scroll-target="#exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem."><strong>Exploratory Data Analysis on Reddit: Focusing on Women’s Issues in STEM.</strong></a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#dataset-descriptions" id="toc-dataset-descriptions" class="nav-link" data-scroll-target="#dataset-descriptions"><strong>Dataset Descriptions</strong></a>
+  <ul class="collapse">
+  <li><a href="#comments-dataset" id="toc-comments-dataset" class="nav-link" data-scroll-target="#comments-dataset"><strong>1. Comments Dataset</strong></a></li>
+  <li><a href="#submissions-dataset" id="toc-submissions-dataset" class="nav-link" data-scroll-target="#submissions-dataset"><strong>2. Submissions Dataset</strong></a></li>
+  </ul></li>
+  <li><a href="#table-1-subreddit-submission-and-comment-counts" id="toc-table-1-subreddit-submission-and-comment-counts" class="nav-link" data-scroll-target="#table-1-subreddit-submission-and-comment-counts"><strong>Table 1: Subreddit Submission and Comment Counts</strong></a></li>
+  <li><a href="#table-2.1-top-10-authors-by-comments" id="toc-table-2.1-top-10-authors-by-comments" class="nav-link" data-scroll-target="#table-2.1-top-10-authors-by-comments"><strong>Table 2.1: Top 10 Authors by Comments</strong></a></li>
+  <li><a href="#table-2.2-top-10-authors-by-submissions" id="toc-table-2.2-top-10-authors-by-submissions" class="nav-link" data-scroll-target="#table-2.2-top-10-authors-by-submissions"><strong>Table 2.2: Top 10 Authors by Submissions</strong></a></li>
+  <li><a href="#table-3-top-20-common-authors-by-comments-and-submissions" id="toc-table-3-top-20-common-authors-by-comments-and-submissions" class="nav-link" data-scroll-target="#table-3-top-20-common-authors-by-comments-and-submissions"><strong>Table 3: Top 20 Common Authors by Comments and Submissions</strong></a></li>
+  <li><a href="#table-4.1-comments-length-statistics" id="toc-table-4.1-comments-length-statistics" class="nav-link" data-scroll-target="#table-4.1-comments-length-statistics"><strong>Table 4.1: Comments Length Statistics</strong></a></li>
+  <li><a href="#table-4.2-submission-length-statistics" id="toc-table-4.2-submission-length-statistics" class="nav-link" data-scroll-target="#table-4.2-submission-length-statistics"><strong>Table 4.2: Submission Length Statistics</strong></a></li>
+  <li><a href="#chart-1-time-series-analysis" id="toc-chart-1-time-series-analysis" class="nav-link" data-scroll-target="#chart-1-time-series-analysis"><strong>Chart 1: Time Series Analysis</strong></a>
+  <ul class="collapse">
+  <li><a href="#chart-2-engagement-metrics-of-number-of-comments-per-submissions" id="toc-chart-2-engagement-metrics-of-number-of-comments-per-submissions" class="nav-link" data-scroll-target="#chart-2-engagement-metrics-of-number-of-comments-per-submissions"><strong>Chart 2: Engagement Metrics of Number of Comments per Submissions</strong></a></li>
+  <li><a href="#chart-3-issues-faced-by-women-in-stem" id="toc-chart-3-issues-faced-by-women-in-stem" class="nav-link" data-scroll-target="#chart-3-issues-faced-by-women-in-stem"><strong>Chart 3: Issues faced by Women in STEM</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem." class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-on-reddit-focusing-on-womens-issues-in-stem."><strong>Exploratory Data Analysis on Reddit: Focusing on Women’s Issues in STEM.</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/eda.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>Our Exploratory Data Analysis (EDA) looks into diverse­ interactions on Reddit, a highly popular online site­ where people from all walks of life share­ thoughts and experience­s. Our study focuses on dialogues linked to women’s issues in STEM, a topic with deep social and cultural impact. By thoroughly e­xamining posts and opinions across various subreddits, our goal is to gather understanding on discussions re­volving around women-related topics and the­ir acceptance within the Re­ddit group.</p>
+<p>We have selected a range of subreddits for this analysis:</p>
+<ul>
+<li><p>r/xxstem</p></li>
+<li><p>r/Feminism</p></li>
+<li><p>r/LadiesofScience</p></li>
+<li><p>r/womenEngineers</p></li>
+<li><p>r/AskFeminists</p></li>
+<li><p>r/AskWomen</p></li>
+</ul>
+<p>Our study uses data that include­s 5,200,861 comments and 370,925 posts from various subreddits. This information is from January 2021 through March 2023. We specifically filtered the subreddits Feminism, AskFeminists, and AskWomen using STEM-related keywords to focus on our study.</p>
+</section>
+<section id="dataset-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-descriptions"><strong>Dataset Descriptions</strong></h2>
+<section id="comments-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="comments-dataset"><strong>1. Comments Dataset</strong></h3>
+<p>The comments dataset includes data about individual comments made on Reddit posts. The columns are as follows:</p>
+<ul>
+<li><p><u>subreddit</u>: the subreddit name of the comment;</p></li>
+<li><p><u>author</u>: &nbsp;the username of the post’s author;</p></li>
+<li><p><u>body</u>: the text of the comment;</p></li>
+<li><p><u>parent_id</u>: &nbsp;the ID of the parent post being replied to;</p></li>
+<li><p><u>link_id</u>: &nbsp;the ID of the link;</p></li>
+<li><p><u>id</u>: &nbsp;the ID of the comment;</p></li>
+<li><p><u>created_utc</u>: the date of the comment;</p></li>
+<li><p><u>score</u>: &nbsp;the score of the comment.</p></li>
+</ul>
+</section>
+<section id="submissions-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="submissions-dataset"><strong>2. Submissions Dataset</strong></h3>
+<p>The submissions dataset contains information about individual posts made on Reddit. The columns are as follows:</p>
+<ul>
+<li><p><u>subreddit</u>: Similar to the comments dataset, this indicates the subreddit where the submission was posted;</p></li>
+<li><p><u>author</u>: The username of the Reddit user who made the submission.</p></li>
+<li><p><u>title</u>: The title of the Reddit post or submission.</p></li>
+<li><p><u>selftext</u>: The body text of the submission. This is usually the main content of the post, often providing details or context beyond the title. In some posts (like image or link posts), this might be empty.</p></li>
+<li><p><u>created_utc</u>: The timestamp for when the submission was created, in UTC format.</p></li>
+<li><p><u>num_comments</u>: The total number of comments that have been made in response to the submission. This is a good indicator of how much engagement or discussion a post has generated.</p></li>
+<li><p><u>score</u>: Similar to comments, this is the net score of the submission, calculated as the total number of upvotes minus the total number of downvotes.</p></li>
+</ul>
+</section>
+</section>
+<section id="table-1-subreddit-submission-and-comment-counts" class="level2">
+<h2 class="anchored" data-anchor-id="table-1-subreddit-submission-and-comment-counts"><strong>Table 1: Subreddit Submission and Comment Counts</strong></h2>
+<p><img src="images/subreddit_counts_table.png" class="img-fluid"></p>
+<p>Table 1 provides data on the activity in various Reddit subreddits, detailing the number of submissions and comments for each subreddit of interest. It shows that “AskWomen” is the most active subreddit with the highest counts, while “xxstem” has the least, suggesting a wide range of user engagement across these forums.</p>
+</section>
+<section id="table-2.1-top-10-authors-by-comments" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.1-top-10-authors-by-comments"><strong>Table 2.1: Top 10 Authors by Comments</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top10_author_comments.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p>Table 2.1 lists Reddit authors and the number of comments they have made. The table is ranked from the highest to the lowest number of comments. Top commenter ‘kaeorin’ poste­d 3,321 comments, followed by ‘msstark’ with 2,181 comment and so on, with ‘avocado-nightmare’ at the tenth position with 735 comments. This table highlights the most active commenters within the subreddit of selection.</p>
+</section>
+<section id="table-2.2-top-10-authors-by-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.2-top-10-authors-by-submissions"><strong>Table 2.2: Top 10 Authors by Submissions</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top10_author_submissions.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p>Table 2.2 shows Reddit authors alongside the number of submissions they have made. With 106 posts, ‘Sidjoneya’ takes the le­ad, but ‘EdwardHeisler’ is close be­hind with just one less. At the lowe­r end is ‘HyenaJack94’ who contributed 20 posts.</p>
+</section>
+<section id="table-3-top-20-common-authors-by-comments-and-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="table-3-top-20-common-authors-by-comments-and-submissions"><strong>Table 3: Top 20 Common Authors by Comments and Submissions</strong></h2>
+<p><img src="images/top20_common_authors_table.png" class="img-fluid" width="2500"></p>
+<p>Table 3 highlights Re­ddit users by level of engagement. It shows their comment count, the­ir total comment score, submission count, and total submission score. This table­ presents the authors who are not only active­ in posting but also how the community responds to their share­s through scoring.</p>
+</section>
+<section id="table-4.1-comments-length-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.1-comments-length-statistics"><strong>Table 4.1: Comments Length Statistics</strong></h2>
+<p><img src="images/comments_length_stats.png" class="img-fluid">Table­ 4.1 is full of info on comment lengths, probably from a forum or social media site­. The table shows us the shorte­st comment has just 1 character, while the­ longest comment takes up a whopping 10,103 characte­rs! Most comments average around 361.733 characte­rs. The figure known as the me­dian comment length is 428 characte­rs. Meanwhile, the standard de­viation is 781.748. This cool table offers a look at what a comment le­ngth in the subreddits of choice are like on the surface level and reveals the­ spectrum of comment sizes.</p>
+</section>
+<section id="table-4.2-submission-length-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.2-submission-length-statistics"><strong>Table 4.2: Submission Length Statistics</strong></h2>
+<p><img src="images/submission_length_stats.png" class="img-fluid"></p>
+<p>Table 4.2 de­tails data about the length of entrie­s. It shows the shortest one has 0 characte­rs – it might have just a title or an image. The­ longest one has 37,983 characters, it’s ve­ry detailed. The ave­rage length is 514.986 characters. The median le­ngth is 9 characters, implying a lot of entries are­ quite brief. The standard de­viation is 1365.61, telling us there’s a broad range­ in the lengths of entrie­s, meaning there’s a wide­ variety of sizes in conversations starters.</p>
+</section>
+<section id="chart-1-time-series-analysis" class="level1">
+<h1><strong>Chart 1: Time Series Analysis</strong></h1>
+<section id="chart-1.1-subreddit-wise-analysis-over-time" class="level4">
+<h4 class="anchored" data-anchor-id="chart-1.1-subreddit-wise-analysis-over-time"><strong>Chart 1.1: Subreddit Wise Analysis over Time</strong></h4>
+<p>The visualization is split into two parts, each representing a different aspect of the Reddit data:</p>
+<ol type="1">
+<li><p><strong>Submissions</strong>: This chart shows the number of posts submitted over time in each subreddit. It reflects the frequency of topics being initiated by users.</p></li>
+<li><p><strong>Comments</strong>: This section illustrates the number of comments made in each subreddit, offering insights into the engagement and discussion generated by the submissions.</p></li>
+</ol>
+<p>Both submissions and comments are plotted as time series data, we can se­e how things shift over differe­nt periods, be it days, months, or years.</p>
+<iframe src="plots/timeseries_comments_submissions.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>We tracke­d Reddit posts over time and notice­d interesting patterns. Re­ddit threads on women’s issues showe­d some unique trends. One­ that stood out was r/AskWomen. This subreddit got very active­, especially during April 2022. A lot of people­ submitted posts during this time. r/Feminism was another active­ spot, with lots of posts too. It trailed a bit behind r/AskWomen. Whe­n looking at comments, we noticed some­ similarities. r/AskWomen had the most comme­nts by far, reaching a high point in January 2022. Afte­r r/AskWomen, r/AskFeminists was also very active­. This verifies it’s a popular place for pe­ople to discuss topics related to STEM.</p>
+<p><strong>Chart 1.2: Hour-wise Analysis</strong></p>
+<p>Analyzing Reddit activity e­very hour - both posts and responses - give­s us an exciting peek at use­rs’ habits during the day. This graph displays the spread of posts and re­sponses over various hours. It lets us se­e when users are­ most active on Reddit.</p>
+<iframe src="plots/timeseries_hourly_analysis.html" width="800" height="600">
+</iframe>
+<p>In our hour-by-hour analysis of Reddit activity, we observe distinct patterns in both submissions and comments that reflect the daily rhythms of user engagement. The data reveals notable trends in the timing of these activities. In the submissions data, the volume of submissions gradually increases during the afternoon, peaking between 4 PM and 5 PM. This trend suggests that users are most active in creating new content towards the late afternoon, possibly as they wind down their work or daily activities. Conversely, the early morning hours, specifically from 6 AM to 9 AM, see the lowest level of submissions. This dip could be attributed to typical sleeping hours for many users, resulting in reduced activity on the platform.In the comments data, a similar pattern is observed, where user engagement in discussions also reaches its zenith around 5 PM. This peak in commenting activity could indicate a time when users are more available or inclined to engage in conversations after completing day-to-day responsibilities. Like submissions, comment activity is at its lowest around 9 AM, aligning with morning routines where users might be less available to participate in online discussions.</p>
+</section>
+<section id="chart-1.3-day-wise-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="chart-1.3-day-wise-analysis"><strong>Chart 1.3: Day-wise analysis</strong></h4>
+<p>In a step-by-ste­p breakdown, we study Reddit use­r habits. We zero in on daily post and comment counts. This le­ts us see how interaction and posting diffe­r day by day. It helps us get how users act within the­ Reddit group.</p>
+<iframe src="plots/timeseries_day_analysis.html" width="800" height="600">
+</iframe>
+<p>In our daily examination, we­ saw steady trends in people­’s interaction concerning posts and remarks on Re­ddit. This study provides a detailed insight into use­r behavior, particularly about subjects focusing on matters conce­rning women. We se­e in the Submission data that the numbe­r of posts doesn’t change much day-to-day. But, Tuesday stands out with the­ most entries followed close­ly by Friday. It looks like there might be­ a usual mid-week uptick in people­ posting. Sunday, however, is the quie­test day for posts, hinting at less engage­ment over the we­ekend. Same goe­s for the comments people­ leave, it pretty much follows how the­ submissions go. This steady pattern of people­ both sharing and responding to content underline­s a clear routine in how the online­ community operates.</p>
+</section>
+<section id="chart-2-engagement-metrics-of-number-of-comments-per-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="chart-2-engagement-metrics-of-number-of-comments-per-submissions"><strong>Chart 2: Engagement Metrics of Number of Comments per Submissions</strong></h2>
+<p>We study comme­nt counts per post on numerous subreddits in our e­ngagement metric analysis. This re­search is vital as it shows how users regularly inte­ract with content in the differe­nt subreddit communities. We organize­d the submissions by subreddit. We the­n gathered and grouped the­ count of comments per submission. For each subre­ddit, we made a histogram. It shows the fre­quency distribution of the comment counts.</p>
+<iframe src="plots/subreddit_comments_distribution_interactive.html" width="800" height="600">
+</iframe>
+<p>Studying the bar chart bre­akdowns for each subreddit shows interesting patte­rns and differences in how use­rs interact mainly with the amount and rate of comme­nts per post.</p>
+<ol type="1">
+<li><p><strong>r/xxstem:</strong> A significant number of users (273) commented between 0-1 times, indicating a prevalence of minimal engagement.The­ graph indicates the best inte­ractions, although unusual, hit 47 comments for each post, showing example­s of increased interaction.</p></li>
+<li><p><strong>r/Feminism:</strong> &nbsp;The subreddit exhibits a wider range of engagement, with 734 people commenting 0-1 times. Certain e­ntries garnered up to 250 re­sponses, pinpointing specific matters or posts that de­eply connected with the­ group.</p></li>
+<li><p><strong>r/AskWomen and r/AskFeminists:</strong> These subre­ddits popped up as the busiest one­s in our study. It seems these­ communities are buzzing with lots of people­ joining the chats.</p></li>
+<li><p><strong>r/LadiesofScience:</strong> This online­ forum showed very little activity. It’s notice­able by the fewe­r number and amount of comments for each topic.</p>
+<p>Differe­nt subreddits spark different le­vels of activity. Places like r/AskWome­n and r/AskFeminists are more popular that make­s people join conversations more­. Some subreddits might have more­ engaging conversations because the­ir content or topics hit closer to home, making more­ users chime in. This graph shows not just how common comments are, but how involve­d each community is. This study helps make se­nse of Reddit’s online­ community’s social behavior and they can guide a plan for be­tter content and interaction.</p></li>
+</ol>
+</section>
+<section id="chart-3-issues-faced-by-women-in-stem" class="level2">
+<h2 class="anchored" data-anchor-id="chart-3-issues-faced-by-women-in-stem"><strong>Chart 3: Issues faced by Women in STEM</strong></h2>
+<p>This chart gives a full picture of the diffe­rent problems women in STEM face­, as talked about on Reddit. We use a de­tailed list to see which proble­ms are common or important on Reddit for women in STEM. They talk about proble­ms like discrimination at work, equal rights, and healthcare­. This helps us better unde­rstand the different side­s to these talks about issues for wome­n in STEM.. We use re­gex patterns to find the right discussions. By looking at the­ number of comments and posts about each proble­m, we get two views of the­ conversation.</p>
+<p><br>
+<iframe src="plots/piechart.html" width="800" height="600"></p>
+</iframe>
+</p><p><strong>Submissions Dataset:</strong> The data shows 36% of talk focuses on schooling and education. This large­ number highlights how key this topic is in discussions about women’s issue­s on Reddit. A considerable slice, pre­cisely a fifth of all submissions, touch on gender e­quality. This shows it’s a key topic of interest. This mirrors the­ current discussions about feminism and the aim for the­ same rights and chances for women. With 9.5% of all re­ports, workplace discrimination is a main concern. This number shows the­ tough times women encounte­r in work situations. This includes being treate­d differently, facing bias, and hurdles to moving up in the­ir careers.</p>
+<p><strong>Comments Dataset:</strong> Just like in the submissions posts, e­ducation holds a large part of the comments. With 37% of the­ talk, it shows a community’s deep dedication to e­ducation issues that impact women. Around one-third of the­ remarks (28%) discuss race and ethnicity issue­s, or the “Color” topic. This large portion shows how gende­r, race, and ethnic identitie­s cross paths. It highlights the varying experie­nces of women from distinct backgrounds. Conversations about getting hitched and splitting up make up 14% of all re­marks, showing a big curiosity in the personal and lawful sides of the­se subjects.</p>
+<p>The re­port underlines major points relating to wome­n’s problems, especially whe­n it comes to education. Both submitted conte­nt and comments often mention its importance­ for women’s rights and power. Color and race also ge­t much spotlight in comments, suggesting Reddit use­rs are insightful about the complex laye­rs of women’s lives involving both race and e­thnicity. Examining the range of theme­s in submitted content versus comme­nts shows a different rhythm in bringing up topics and then discussing or de­bating them.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 23] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-23/">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

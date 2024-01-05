@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Focusing on Women's Issues in STEM – nlp</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Focusing on Women’s Issues in STEM</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./introduction.html" rel="" target="">
+ <span class="menu-text">Summary</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html" rel="" target="">
+ <span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./nlp.html" rel="" target="" aria-current="page">
+ <span class="menu-text">NLP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html" rel="" target="">
+ <span class="menu-text">ML</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.html" rel="" target="">
+ <span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#natural-language-processing-focusing-on-womens-issues-in-stem" id="toc-natural-language-processing-focusing-on-womens-issues-in-stem" class="nav-link active" data-scroll-target="#natural-language-processing-focusing-on-womens-issues-in-stem">Natural Language Processing: <strong>Focusing on Women’s Issues in STEM</strong></a>
+  <ul class="collapse">
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#external-data-analysis" id="toc-external-data-analysis" class="nav-link" data-scroll-target="#external-data-analysis">External Data Analysis</a></li>
+  <li><a href="#table-1-stem-representation-and-engagement-analysis-table" id="toc-table-1-stem-representation-and-engagement-analysis-table" class="nav-link" data-scroll-target="#table-1-stem-representation-and-engagement-analysis-table"><strong>Table 1: STEM Representation and Engagement Analysis Table</strong></a></li>
+  <li><a href="#data-pre-processing" id="toc-data-pre-processing" class="nav-link" data-scroll-target="#data-pre-processing">Data Pre-processing</a></li>
+  <li><a href="#keyword-analysis-and-dummy-variable-creation" id="toc-keyword-analysis-and-dummy-variable-creation" class="nav-link" data-scroll-target="#keyword-analysis-and-dummy-variable-creation">Keyword Analysis and Dummy Variable Creation</a></li>
+  <li><a href="#calculating-word-frequencies-along-with-word-cloud-for-comments-and-submissions-data" id="toc-calculating-word-frequencies-along-with-word-cloud-for-comments-and-submissions-data" class="nav-link" data-scroll-target="#calculating-word-frequencies-along-with-word-cloud-for-comments-and-submissions-data">Calculating Word Frequencies along with Word Cloud for Comments and Submissions Data</a></li>
+  <li><a href="#figure-2.1-word-cloud---comments-data" id="toc-figure-2.1-word-cloud---comments-data" class="nav-link" data-scroll-target="#figure-2.1-word-cloud---comments-data"><strong>Figure 2.1: Word Cloud - Comments Data</strong></a></li>
+  <li><a href="#table-2.2-most-frequent-terms---submissions-data" id="toc-table-2.2-most-frequent-terms---submissions-data" class="nav-link" data-scroll-target="#table-2.2-most-frequent-terms---submissions-data"><strong>Table 2.2: Most frequent terms - Submissions Data</strong></a></li>
+  <li><a href="#figure-2.2-word-cloud---submissions-data" id="toc-figure-2.2-word-cloud---submissions-data" class="nav-link" data-scroll-target="#figure-2.2-word-cloud---submissions-data"><strong>Figure 2.2: Word Cloud - Submissions Data</strong></a></li>
+  <li><a href="#average-distribution-of-text-lengths" id="toc-average-distribution-of-text-lengths" class="nav-link" data-scroll-target="#average-distribution-of-text-lengths">Average distribution of text lengths</a></li>
+  <li><a href="#figure-3.2-average-submissions-length-per-subreddit" id="toc-figure-3.2-average-submissions-length-per-subreddit" class="nav-link" data-scroll-target="#figure-3.2-average-submissions-length-per-subreddit"><strong>Figure 3.2: Average Submissions Length Per Subreddit</strong></a></li>
+  <li><a href="#tf-idf-score-analysis-for-reddit-comments-and-submissions" id="toc-tf-idf-score-analysis-for-reddit-comments-and-submissions" class="nav-link" data-scroll-target="#tf-idf-score-analysis-for-reddit-comments-and-submissions">TF-IDF Score Analysis for Reddit Comments and Submissions</a></li>
+  <li><a href="#table-4.1-tf-idf-score-for-comments-data" id="toc-table-4.1-tf-idf-score-for-comments-data" class="nav-link" data-scroll-target="#table-4.1-tf-idf-score-for-comments-data"><strong>Table 4.1: TF-IDF Score for Comments Data</strong></a></li>
+  <li><a href="#table-4.2-tf-idf-score-for-submissions-data" id="toc-table-4.2-tf-idf-score-for-submissions-data" class="nav-link" data-scroll-target="#table-4.2-tf-idf-score-for-submissions-data"><strong>Table 4.2:</strong> TF-IDF Score <strong>for Submissions Data</strong></a></li>
+  <li><a href="#sentiment-analysis-of-reddit-comments-and-submissions" id="toc-sentiment-analysis-of-reddit-comments-and-submissions" class="nav-link" data-scroll-target="#sentiment-analysis-of-reddit-comments-and-submissions">Sentiment Analysis of Reddit Comments and Submissions</a></li>
+  <li><a href="#table-5.1-sentiment-analysis-of-submissions-and-comments" id="toc-table-5.1-sentiment-analysis-of-submissions-and-comments" class="nav-link" data-scroll-target="#table-5.1-sentiment-analysis-of-submissions-and-comments"><strong>Table 5.1: Sentiment Analysis of Submissions and Comments</strong></a></li>
+  <li><a href="#figure-5.1-comparing-the-models-for-submissions-and-comments-data" id="toc-figure-5.1-comparing-the-models-for-submissions-and-comments-data" class="nav-link" data-scroll-target="#figure-5.1-comparing-the-models-for-submissions-and-comments-data"><strong>Figure 5.1: Comparing the Models for Submissions and Comments Data</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="natural-language-processing-focusing-on-womens-issues-in-stem" class="level1">
+<h1>Natural Language Processing: <strong>Focusing on Women’s Issues in STEM</strong></h1>
+<p><img src="images/nlp.webp" class="img-fluid"></p>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p>In this section, our focus is on the discussion of keywords like STEM within topics such as xxstem, LadiesofScience, womenEngineers, AskWomen, AskFeminists, and Feminism to understand conversations taken place via comments and submissions.</p>
+<p>We collected and preprocessed submissions and comments related to Women in STEM. The data preprocessing process includes cleaning the text, removing stop words, and tokenizing the data. We performed keyword analysis, TF-IDF score analysis, and sentiment analysis for comments and submissions data. Additionally, we visualize the results of our analysis through word clouds and line graphs depicting average distribution of texts in each subreddit for submissions and comments data.</p>
+<p>We introduce external demographic data from the NSF website called "Diversity and STEM: Women, Minorities, and Persons with Disabilities 2023". This allows us to intergrate the results from the internet as well as from the real world and allows us to identify similarities between the focus of what is being said on the internet and what is happening in the real world.</p>
+</section>
+<section id="external-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="external-data-analysis">External Data Analysis</h2>
+<p>We recently combined Reddit data with external demographic data to conduct a thorough analysis. Using this method, we were able to get more insight into how different demographic groups are represented and involved in STEM fields as they are discussed on Reddit platforms.</p>
+<p>We gathered an extensive dataset from subreddits that addresses issues related to women in STEM. Demographic information about labor force participation and STEM field representation was provided by the external data. Important demographic categories like gender, race, and disability status are included in this data.</p>
+</section>
+<section id="table-1-stem-representation-and-engagement-analysis-table" class="level2">
+<h2 class="anchored" data-anchor-id="table-1-stem-representation-and-engagement-analysis-table"><strong>Table 1: STEM Representation and Engagement Analysis Table</strong></h2>
+<p><img src="images/external.png" class="img-fluid" width="800"></p>
+<p>The thorough investigation that combines external demographic data with Reddit discussions provides insight into the status of racial and gender representation in STEM fields. Even though women are underrepresented in the workforce, there is a lot of discussion about female participation in STEM on Reddit. Talks also touch on the diversity of races and ethnicities, emphasizing the need for greater inclusion, particularly for White and Asian people. The information suggests that there is less participation and representation of people with disabilities in STEM fields. All things considered, the analysis highlights the community’s support for diversity and inclusion The integration of demographic data and online discourse offers a&nbsp;viewpoint on public opinion and actual inequalities in STEM fields.</p>
+</section>
+<section id="data-pre-processing" class="level2">
+<h2 class="anchored" data-anchor-id="data-pre-processing">Data Pre-processing</h2>
+<p>We focused on preprocessing Reddit data, which involves a number of steps to organize and improve the text. To ensure uniformity and relevance, we started this process with text cleaning and normalization, which involved changing all of the text to lowercase, removing URLs, and removing non-alphabetic characters. To clean the text, we applied the PySpark User-Defined Function (UDF). After tokenizing it into individual words, non-contributory elements were filtered out by removing stop words, both common English stop words and others unique to our dataset. &nbsp;In order to fully comprehend the content of each submission, we merged words from the title and the selftext. These steps&nbsp;were&nbsp;essential for laying the groundwork for NLP analysis and improving the quality of insights.</p>
+</section>
+<section id="keyword-analysis-and-dummy-variable-creation" class="level2">
+<h2 class="anchored" data-anchor-id="keyword-analysis-and-dummy-variable-creation">Keyword Analysis and Dummy Variable Creation</h2>
+<p>We create corresponding dummy variables by identifying significant keywords associated with particular topics. Two main areas of interest—education and color (ethnicity)—were given specific keywords. For education, keywords related to&nbsp;“school,” “university,” and “education” were chosen. Keywords related to color included “black,” “hispanic,” “asian,” and “ethnicity.” These keywords were specifically selected to capture the essence of the discussions around these themes.</p>
+</section>
+<section id="calculating-word-frequencies-along-with-word-cloud-for-comments-and-submissions-data" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-word-frequencies-along-with-word-cloud-for-comments-and-submissions-data">Calculating Word Frequencies along with Word Cloud for Comments and Submissions Data</h2>
+<p>Next we want to analyze the word frequency in Comments and Submissions in Reddit data. The statistics of high-frequency words can tell us most intuitively about the topics discussed and the tone of the speech. We use word cloud to visualize the word frequency statistics, which can most directly reflect the frequency of words.</p>
+<p><strong>Table 2.1: Most frequent terms - Comments Data</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/words_com.png" class="img-fluid figure-img" width="167"></p>
+</figure>
+</div>
+</section>
+<section id="figure-2.1-word-cloud---comments-data" class="level2">
+<h2 class="anchored" data-anchor-id="figure-2.1-word-cloud---comments-data"><strong>Figure 2.1: Word Cloud - Comments Data</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/wc_com.png" class="img-fluid figure-img" width="500"></p>
+</figure>
+</div>
+<p>In comments, “People” is the most frequent word, with 101,322 words. This may indicate that the discussion is mainly focused on social humanities. “Men” and “Women” also appear very frequently, with 62,763 and 51,089 occurrences respectively. The appearance of these high-frequency words is reasonable, after all, the topic itself is strongly related to people and gender. However, these high-frequency words do not contain words that can clearly convey emotions or feelings as we expected.</p>
+</section>
+<section id="table-2.2-most-frequent-terms---submissions-data" class="level2">
+<h2 class="anchored" data-anchor-id="table-2.2-most-frequent-terms---submissions-data"><strong>Table 2.2: Most frequent terms - Submissions Data</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/words_sub.png" class="img-fluid figure-img" width="168"></p>
+</figure>
+</div>
+</section>
+<section id="figure-2.2-word-cloud---submissions-data" class="level2">
+<h2 class="anchored" data-anchor-id="figure-2.2-word-cloud---submissions-data"><strong>Figure 2.2: Word Cloud - Submissions Data</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/wc_sub.png" class="img-fluid figure-img" width="500"></p>
+</figure>
+</div>
+<p>In submissions, “Women” is the most frequent word. This is in line with our expectations as we are exploring the topic of women ourselves. Other words that appear more frequently are “know”, “think”, “feel”, “plan”, “work”, “time”, etc. may indicate that the topic of these posts is some personal sharing or discussion about the future.</p>
+</section>
+<section id="average-distribution-of-text-lengths" class="level2">
+<h2 class="anchored" data-anchor-id="average-distribution-of-text-lengths">Average distribution of text lengths</h2>
+<p>Changes in average text length over time can often reflect the depth of user engagement in a topic. So we grouped them by subreddit, calculated the average length of submissions and comments over time, and then visualized them using a line graph.</p>
+<p><strong>Figure 3.1: Average Comments Length Per Subreddit</strong></p>
+<iframe src="images/average_text_length_over_time_com.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>From the graph, we can clearly see that the average comment length of “xxstem” is the most volatile, and there is a clear peak in the average text length of “xxstem” topics around January 2022, but it quickly falls back to the previous trend. The average comment length of “AskWomen” is the highest during the time period of the data, and the average comment lengths of the rest of the subreddits do not change significantly in general. The general trend in “AskWomen” is indicative of users’ tendency to post longer comments.</p>
+</section>
+<section id="figure-3.2-average-submissions-length-per-subreddit" class="level2">
+<h2 class="anchored" data-anchor-id="figure-3.2-average-submissions-length-per-subreddit"><strong>Figure 3.2: Average Submissions Length Per Subreddit</strong></h2>
+<iframe src="images/average_text_length_over_time_sub.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>“xxstem fluctuates more significantly in submissions, with a more pronounced peak in both July. And this period is more in line with the start of the school season as well as the job search season, which could mean that there is more active discussion of STEM during the job search or school start periods.” The average submission lengths for “Feminism,” “womenEngineers,” and “LadiesOfScience” fluctuated, but did not show a clear long-term upward or downward trend.</p>
+</section>
+<section id="tf-idf-score-analysis-for-reddit-comments-and-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="tf-idf-score-analysis-for-reddit-comments-and-submissions">TF-IDF Score Analysis for Reddit Comments and Submissions</h2>
+<p>We went on to analyze the TF-IDF score, which is a common metric in Natural Language Processing tasks that helps us to be more aware of unique and important terms in the data. The results of the TF-IDF score are more reflective of the importance of the word than the word frequency analysis. The higher the score, the more important and unique the term is.</p>
+</section>
+<section id="table-4.1-tf-idf-score-for-comments-data" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.1-tf-idf-score-for-comments-data"><strong>Table 4.1: TF-IDF Score for Comments Data</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tf_idf_com.png" class="img-fluid figure-img" width="283"></p>
+</figure>
+</div>
+<p>We can see that the word “career” has the highest score in the comments, which is in line with our expectation that the consideration of future career is an important aspect of the topic of stem. Secondly, “opinion” and “life” may also indicate that the comments focus on sharing experiences in one’s life as well as some life advice. In addition, the word “hard” may also indicate the attitude towards stem itself and related careers.</p>
+</section>
+<section id="table-4.2-tf-idf-score-for-submissions-data" class="level2">
+<h2 class="anchored" data-anchor-id="table-4.2-tf-idf-score-for-submissions-data"><strong>Table 4.2:</strong> TF-IDF Score <strong>for Submissions Data</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tf_idf_sub.png" class="img-fluid figure-img" width="275"></p>
+</figure>
+</div>
+<p>The words “career”, “fresh”, “harass” and “wrong” had the highest TF-IDF scores in the submissions. This probably reflects the fact that submission’s focus is more on personal care and relationship issues.</p>
+<p>Some terms like “wrong” and “misunderstand” appear in both comments and submissions with high TF-IDF scores, highlighting common themes of conversations in both types of content.</p>
+</section>
+<section id="sentiment-analysis-of-reddit-comments-and-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="sentiment-analysis-of-reddit-comments-and-submissions">Sentiment Analysis of Reddit Comments and Submissions</h2>
+<p>In the sentiment analysis session, we used various models and pipelines in Spark NLP to analyze the sentiment of the textual content in the submissions and comments data, which gives us an idea of the sentiment tone of the users on the topic of women in STEM. We used three sentiment analysis models Vivekn, IMDB and Twitter to analyze the data in submissions and comments respectively.</p>
+</section>
+<section id="table-5.1-sentiment-analysis-of-submissions-and-comments" class="level2">
+<h2 class="anchored" data-anchor-id="table-5.1-sentiment-analysis-of-submissions-and-comments"><strong>Table 5.1: Sentiment Analysis of Submissions and Comments</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sentiment.png" class="img-fluid figure-img" width="600"></p>
+</figure>
+</div>
+<p><strong>IMDB:</strong> For the comments, the majority are positive (51.685%), with negative comments close behind (47.143%) and very few neutrals (1.171%).For the submissions, more negative (56.33%) than positive (42.781%), with an even smaller proportion of neutrals (0.89%).</p>
+<p><strong>Twitter:</strong> For the comments, similar to IMDB, the majority are positive (51.407%), with a significant amount of negative sentiment (43.632%) and a slightly larger neutral category (4.961%) than IMDB.The submissions display a higher negativity (55.885%) compared to positivity (40.967%), with a small neutral segment (3.148%).</p>
+<p><strong>Vivek:</strong> The comments shows a more balanced sentiment, with positives (47.351%) and negatives (51.639%) being quite close and neutrals (1.01%) slightly less than IMDB. On the other hand, the submissions have a balanced distribution between positive (47.765%) and negative (51.129%) sentiments with neutrals (1.106%) comparable to the comments.</p>
+</section>
+<section id="figure-5.1-comparing-the-models-for-submissions-and-comments-data" class="level2">
+<h2 class="anchored" data-anchor-id="figure-5.1-comparing-the-models-for-submissions-and-comments-data"><strong>Figure 5.1: Comparing the Models for Submissions and Comments Data</strong></h2>
+<iframe src="images/sentiment_analysis_percentages.html" width="800" height="600" style="float: left;">
+</iframe>
+<p>For both comments and submissions, Twitter and IMDB have a higher positivity rate than “Vivek”, but “Vivek” has a more balanced sentiment distribution. Submissions are generally more negative than comments across all platforms. Neutral sentiments are the least common across both types of content and all platforms.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 23] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-23/">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
